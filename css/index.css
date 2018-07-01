@@ -1,0 +1,6 @@
+.canvas {
+    height: 600px;
+    width: 800px;
+    position: absolute;
+    background: #000;
+}
