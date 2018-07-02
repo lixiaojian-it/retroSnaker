@@ -1,7 +1,7 @@
 //- 食物的构造函数
-function Foot() {
-    this.width = 20;
-    this.height = 20;
+function Foot(width, height) {
+    this.width = width;
+    this.height = height;
     this.position = 'absolute'
     this.top = _.random(0, this.height * ($canvas.height() / this.height - 1));
     this.left = _.random(0, this.width * ($canvas.width() / this.width - 1));
@@ -9,10 +9,12 @@ function Foot() {
 }
 
 //- 渲染食物方法
-Foot.prototype.render = function () {
+Foot.prototype.render = function ($canvas) {
     //- 这里直接生成的 jQuery 包装Dom对象挂载到实例的对象上，
-    //- 目的是为了在 Foot的其他方法中可以访问当前实例对象对应的真实DOM对象。
-   this.$this  = $('<div></div>').css({
+    //- 目的是为了在 Foot的其他方法中可以访问当前实例对象对应的真实DOM对象。  
+    let $div = $('<div></div>');
+    this.$this = $div;
+    this.$this.css({
         width: this.width,
         height: this.height,
         position: this.position,
