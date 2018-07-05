@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,22 @@
     <title>贪吃蛇</title>
     <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
+    <div class="btn">
+        <input id="start_btn" type="button" value="游戏开始">
+        <input id="pause_btn" type="button" value="游戏暂停">
+        <select id="grade" >
+            <option value=1000>简单模式</option>
+            <option value=500>正常模式</option>
+            <option value=100>困难模式</option>
+        </select>
+    </div>
     <div class="canvas" id="canvas"></div>
-    <script src="./vendor/jquery-3.2.1.js"></script>
-    <script src="./vendor/underscore.js"></script>
-    <script src="./js/foot.js"></script>
-    <script src="./js/snake.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./vendor/sea.js"></script>
+    <script>
+         seajs.use('./js/main')
+    </script>
 </body>
+
 </html>

@@ -1,5 +1,15 @@
+/** {
+    margin: 0;
+    padding: 0;
+}*/
+.btn {
+    padding:  10px;
+}
+#start_btn {
+    margin-right: 10px;
+}
 .canvas {
-    height: 600px;
+    height: 500px;
     width: 800px;
     position: absolute;
     background: #000;
